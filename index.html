@@ -2,75 +2,86 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aang Gunawan | Creative Retoucher</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aang Gunawan | Photo Retoucher</title>
 <meta name="description" content="High-end retouching and creative photo manipulation by Aang Gunawan. Available for remote work and freelance projects.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="nav"><div class="in">
+<header class="nav">
   <a class="brand" href="#top">Aang Gunawan</a>
   <nav>
-    <a href="#retouching">Retouching</a>
-    <a href="#creative">Creative works</a>
-    <a href="#services">Services</a>
+    <a class="nl" href="#retouching">Retouching</a>
+    <a class="nl" href="#image-editing">Creative works</a>
+    <a class="nl" href="#services">Services</a>
     <a class="btn sm" href="#contact">Contact</a>
   </nav>
-</div></header>
+</header>
 
 <main id="top">
   <section class="hero">
-    <div>
-      <h1>Aang Gunawan</h1>
-      <p class="tagline">High-end retouching and creative photo manipulation.</p>
-      <div class="actions">
-        <a class="btn" href="#retouching">View work</a>
-        <a class="btn ghost" href="#contact">Get in touch</a>
+    <div class="hero-in">
+      <div>
+        <h1>Aang<br>Gunawan</h1>
+        <p class="tagline">High-end retouching and creative photo manipulation.</p>
+        <div class="actions">
+          <a class="btn white" href="#retouching">View work</a>
+          <a class="btn outline" href="#contact">Get in touch</a>
+        </div>
       </div>
+      <div class="hero-cards" id="hero-cards"></div>
     </div>
-    <div id="hero-compare"></div>
   </section>
 
-  <section id="retouching">
-    <h2>Photo retouching</h2>
-    <p class="lead">Drag the slider to compare the original with the retouched result.</p>
-    <div class="grid wide" id="retouch-grid"></div>
-  </section>
-
-  <section id="creative">
-    <h2>Creative works</h2>
-    <div class="tabs">
-      <button class="tab active" data-tab="image">Image editing</button>
-      <button class="tab" data-tab="typography">Portrait typography</button>
+  <section class="row" id="retouching">
+    <div class="info">
+      <h2>Photo retouching</h2>
+      <p>Slide to compare the original with the final result.</p>
+      <button class="more" hidden>View all</button>
     </div>
-    <div class="grid" id="creative-grid"></div>
+    <div class="grid" data-cat="retouch"></div>
   </section>
 
-  <section id="services">
-    <h2>Services</h2>
-    <ul class="services">
-      <li><h3>Beauty and skin retouching</h3><p>Natural skin texture, clean tones, and detail that holds up at full size.</p></li>
-      <li><h3>Profile and headshot editing</h3><p>Consistent, polished portraits for teams, creators, and professionals.</p></li>
-      <li><h3>Color grading</h3><p>Balanced color and mood across a single image or a whole set.</p></li>
+  <section class="row" id="image-editing">
+    <div class="info">
+      <h2>Image editing</h2>
+      <p>Sports artwork and creative manipulation.</p>
+      <button class="more" hidden>View all</button>
+    </div>
+    <div class="grid" data-cat="image"></div>
+  </section>
+
+  <section class="row" id="typography">
+    <div class="info">
+      <h2>Portrait typography</h2>
+      <p>Words shaped into faces. Tap a work to zoom in.</p>
+      <button class="more" hidden>View all</button>
+    </div>
+    <div class="grid" data-cat="typography"></div>
+  </section>
+
+  <section class="row" id="services">
+    <div class="info"><h2>Services</h2></div>
+    <ul class="svc">
+      <li><h3>Beauty and skin retouching</h3><p>Natural texture and clean tones that hold up at full size.</p></li>
+      <li><h3>Profile and headshot editing</h3><p>Polished, consistent portraits for teams and professionals.</p></li>
+      <li><h3>Color grading</h3><p>Balanced color and mood across one image or a whole set.</p></li>
       <li><h3>Creative manipulation</h3><p>Composites and concept edits, from sports artwork to typography portraits.</p></li>
     </ul>
-    <p class="tools">Tools: Photoshop, Lightroom</p>
   </section>
 
-  <section id="contact">
-    <h2>Let’s work together</h2>
+  <section class="contact" id="contact">
+    <h2>Let’s work<br>together</h2>
     <p class="lead">Send your photos and a short brief. I will reply with a quote and turnaround time.</p>
+    <a class="mail" href="mailto:your@email.com">your@email.com</a>
     <div class="actions">
-      <a class="btn" href="mailto:your@email.com">your@email.com</a>
-      <a class="btn ghost" href="assets/cv.pdf" download>Download CV</a>
+      <a class="btn line" href="assets/cv.pdf" download>Download CV</a>
+      <a class="btn line" href="https://www.behance.net/graphicgoen" target="_blank" rel="noopener">Behance</a>
+      <a class="btn line" href="https://www.instagram.com/graphicgoen" target="_blank" rel="noopener">Instagram</a>
     </div>
-    <p class="social">
-      <a href="https://www.behance.net/graphicgoen" target="_blank" rel="noopener">Behance</a>
-      <a href="https://www.instagram.com/graphicgoen" target="_blank" rel="noopener">Instagram</a>
-    </p>
   </section>
 </main>
 
