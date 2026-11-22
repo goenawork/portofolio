@@ -3,8 +3,8 @@
 const WORKS = {
   // The first retouch work is shown in the hero. The rest fill the Photo retouching grid.
   retouch: [
-    { title: "Beauty portrait 1", before: "assets/img/retouch/01-before.jpg", after: "assets/img/retouch/01-after.jpg" },
-    { title: "Beauty portrait 2", before: "assets/img/retouch/02-before.jpg", after: "assets/img/retouch/02-after.jpg" },
+    { title: "Potrait", before: "assets/img/retouch/01-before.jpg", after: "assets/img/retouch/01-after.jpg" },
+    { title: "Beauty portrait", before: "assets/img/retouch/02-before.jpg", after: "assets/img/retouch/02-after.jpg" },
     { title: "Profile photo", before: "assets/img/retouch/03-before.jpg", after: "assets/img/retouch/03-after.jpg" },
     { title: "Headshot", before: "assets/img/retouch/04-before.jpg", after: "assets/img/retouch/04-after.jpg" },
     { title: "Fashion portrait", before: "assets/img/retouch/05-before.jpg", after: "assets/img/retouch/05-after.jpg" }
