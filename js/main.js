@@ -2,18 +2,12 @@ const $ = s => document.querySelector(s);
 const LIMIT = 6; // works shown per category before "View all"
 const LABEL = { retouch: 'Photo retouching', image: 'Image editing', typography: 'Portrait typography' };
 
-/* Hero: one retouch slider + one typography work (skipped if the list is empty) */
+/* Hero: the first retouch work as a before-after slider */
 const hero = $('#hero-cards');
 if (WORKS.retouch[0]) {
   const f = document.createElement('div');
   f.className = 'frame';
   f.append(createCompare(WORKS.retouch[0]));
-  hero.append(f);
-}
-if (WORKS.typography[0]) {
-  const f = document.createElement('div');
-  f.className = 'frame';
-  f.innerHTML = `<div class="shot"><img src="${WORKS.typography[0].src}" alt="${WORKS.typography[0].title}"></div>`;
   hero.append(f);
 }
 
