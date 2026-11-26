@@ -48,7 +48,30 @@ function openBox(w) {
   box.hidden = false;
   document.body.style.overflow = 'hidden';
 }
-function closeBox() { box.hidden = true; document.body.style.overflow = ''; }
+function closeBox() {
+  box.hidden = true;
+  document.body.style.overflow = '';
+  box.querySelector('.compare')?.remove();
+  boxImg.hidden = false;
+}
+/* Full-screen before-after: a larger slider sized to the photo's own ratio */
+function openCompare(w) {
+  box.querySelector('.compare')?.remove();
+  const el = createCompare(w, false);
+  el.classList.add('big');
+  el.onclick = e => e.stopPropagation();
+  const im = el.querySelector('img');
+  const fit = () => {
+    const r = im.naturalWidth / im.naturalHeight;
+    if (r) { el.style.aspectRatio = r; el.style.width = `min(94vw, ${88 * r}vh)`; }
+  };
+  im.complete ? fit() : im.addEventListener('load', fit);
+  boxImg.hidden = true;
+  box.classList.remove('zoom');
+  box.append(el);
+  box.hidden = false;
+  document.body.style.overflow = 'hidden';
+}
 boxImg.onclick = e => { e.stopPropagation(); box.classList.toggle('zoom'); };
 box.onclick = closeBox;
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && !box.hidden) closeBox(); });
